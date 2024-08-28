@@ -1,0 +1,21 @@
+# Entorno virtual
+venv/
+pyvenv/
+.venv
+.env/
+*.pyc
+__pycache__/
+
+# Configuraciones de IDEs
+.idea/
+.vscode/
+
+# Archivos de configuración del sistema operativo
+.DS_Store
+
+# Dependencias instaladas
+*.egg-info/
+*.egg
+
+# Archivos de logs
+*.log
