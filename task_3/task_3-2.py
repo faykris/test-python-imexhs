@@ -5,13 +5,19 @@
 
 import json
 import os
+from dotenv import load_dotenv
 import threading
 import logging
 from queue import Queue
 
+# Load .env file
+load_dotenv()
+path = os.getenv("FOLDER_PATH")
+
 # Configure logging to a file with thread safety
 logging.basicConfig(filename='shared_log.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 log_lock = threading.Lock()
+
 
 def process_element(element_id, element_data):
     try:
@@ -31,7 +37,8 @@ def process_element(element_id, element_data):
 
         # Logging the data
         with log_lock:
-            logging.info(f"Element ID: {element_id}, Average Before: {avg_before:.2f}, Average After: {avg_after:.2f}, Size: {size_of_data}")
+            logging.info(
+                f"Element ID: {element_id}, Average Before: {avg_before:.2f}, Average After: {avg_after:.2f}, Size: {size_of_data}")
 
         # Print the data
         print(f"Element ID: {element_id}")
@@ -41,6 +48,7 @@ def process_element(element_id, element_data):
         with log_lock:
             logging.error(f"Error processing element ID '{element_id}': {e}")
 
+
 def worker_thread(queue):
     while True:
         element_id, element_data = queue.get()
@@ -48,6 +56,7 @@ def worker_thread(queue):
             break
         process_element(element_id, element_data)
         queue.task_done()
+
 
 def process_json_file(folder_path, json_filename):
     try:
@@ -85,6 +94,6 @@ def process_json_file(folder_path, json_filename):
 # Example usage
 if __name__ == '__main__':
     print("---- File sample-03-00-json.json ----")
-    process_json_file('/Users/cristianpinzon/Downloads/prueba_python', 'sample-03-00-json.json')
+    process_json_file(path, 'sample-03-00-json.json')
     print("---- File sample-03-01-json.json ----")
-    process_json_file('/Users/cristianpinzon/Downloads/prueba_python', 'sample-03-01-json.json')
+    process_json_file(path, 'sample-03-01-json.json')

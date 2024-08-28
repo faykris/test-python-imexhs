@@ -89,6 +89,6 @@ if __name__ == '__main__':
     print("--- List Folder Contents ---")
     list_folder_contents(path)
     print("--- Read CSV File ---")
-    read_csv_file(os.getenv(path), 'sample-01-csv.csv')
+    read_csv_file(path, 'sample-01-csv.csv')
     print("--- Read DICOM File ---")
     read_dicom_file(path, 'sample-01-dicom.dcm', 0x0008, 0x0010)
