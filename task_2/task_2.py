@@ -1,9 +1,14 @@
 """
 2. Object-Oriented Programming (OOP)
 """
-
+import os
+from dotenv import load_dotenv
 import logging
 import pydicom
+
+# Load .env file
+load_dotenv()
+path = os.getenv("FOLDER_PATH")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -115,5 +120,5 @@ class StudyRecord(PatientRecord):
 # Example usage
 if __name__ == '__main__':
     study_record = StudyRecord()
-    study_record.load_study_from_dicom('/Users/cristianpinzon/Downloads/prueba_python/sample-02-dicom.dcm')
+    study_record.load_study_from_dicom(f"{path}/sample-02-dicom.dcm")
     print(study_record)

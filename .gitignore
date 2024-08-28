@@ -1,4 +1,4 @@
-# Entorno virtual
+# Virtual Environment
 venv/
 pyvenv/
 .venv
@@ -6,16 +6,19 @@ pyvenv/
 *.pyc
 __pycache__/
 
-# Configuraciones de IDEs
+# IDEs Configs
 .idea/
 .vscode/
 
-# Archivos de configuración del sistema operativo
+# SO Configuration files
 .DS_Store
 
-# Dependencias instaladas
+# Installed dependencies
 *.egg-info/
 *.egg
 
-# Archivos de logs
+# Log files
 *.log
+
+# Environment Variables
+.env

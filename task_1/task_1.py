@@ -4,9 +4,14 @@
 
 import os
 import csv
+from dotenv import load_dotenv
 import logging
 import numpy as np
 import pydicom
+
+# Load .env file
+load_dotenv()
+path = os.getenv("FOLDER_PATH")
 
 # Configure logging
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -82,8 +87,8 @@ def read_dicom_file(path, filename, *tags):
 # Example usage
 if __name__ == '__main__':
     print("--- List Folder Contents ---")
-    list_folder_contents('/Users/cristianpinzon/Downloads/prueba_python')
+    list_folder_contents(path)
     print("--- Read CSV File ---")
-    read_csv_file('/Users/cristianpinzon/Downloads/prueba_python', 'sample-01-csv.csv')
+    read_csv_file(os.getenv(path), 'sample-01-csv.csv')
     print("--- Read DICOM File ---")
-    read_dicom_file('/Users/cristianpinzon/Downloads/prueba_python', 'sample-01-dicom.dcm', 0x0008, 0x0010)
+    read_dicom_file(path, 'sample-01-dicom.dcm', 0x0008, 0x0010)
