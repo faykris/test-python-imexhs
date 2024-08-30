@@ -46,7 +46,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-![New table image](`images/Screenshot 2024-08-30 at 3.27.29 PM.png`)
+![New table image](images/ss1.png)
 
 ## Running Tasks
 Now I will show you how you can run every task of this test:
@@ -57,7 +57,7 @@ Run the following command since the root project or execute directly through you
 python task_1/task_1.py
 ```
 The result will be something like this:
-![task 1](`images/Screenshot 2024-08-30 at 3.42.06 PM.png`)
+![task 1](images/ss2.png)
 
 ### Task 2
 Run the following command since the root project or execute directly through your code editor
@@ -65,7 +65,7 @@ Run the following command since the root project or execute directly through you
 python task_2/task_2.py
 ```
 The result will be something like this:
-![task 2](images/Screenshot 2024-08-30 at 3.44.46 PM.png)
+![task 2](images/ss3.png)
 
 ### Task 3.1
 Run the following command since the root project or execute directly through your code editor
@@ -73,7 +73,7 @@ Run the following command since the root project or execute directly through you
 python task_3/task_3-1.py
 ```
 The result will be something like this:
-![task 3.1](images/Screenshot 2024-08-30 at 3.47.02 PM.png)
+![task 3.1](images/ss4.png)
 
 ### Task 3.2
 Run the following command since the root project or execute directly through your code editor
@@ -81,7 +81,7 @@ Run the following command since the root project or execute directly through you
 python task_3/task_3-2.py
 ```
 The result will be something like this:
-![task 3.2](images/Screenshot 2024-08-30 at 3.49.56 PM.png)
+![task 3.2](images/ss5.png)
 
 ### Task 4
 Go to the Task 4 folder and execute the following command to start Django project
@@ -90,7 +90,7 @@ cd task_4
 python manage.py runserver
 ```
 The server should be running like this:
-![running django](images/Screenshot 2024-08-30 at 4.04.38 PM.png)
+![running django](images/ss6.png)
 
 Now I will show how work each endpoint on this task:
 
@@ -124,14 +124,14 @@ Example body:
 }
 ```
 Result:
-![post element](images/Screenshot 2024-08-30 at 4.21.46 PM.png)
+![post element](images/ss7.png)
 
 #### GET - List all elements
 
 - http://127.0.0.1:8000/api/elements/
 
 Result:
-![get all elements](images/Screenshot 2024-08-30 at 4.33.48 PM.png)
+![get all elements](images/ss8.png)
 
 
 #### GET - Specific element by id
@@ -139,7 +139,7 @@ Result:
 - http://127.0.0.1:8000/api/elements/aabbcc1/
 
 Result:
-![get element by id](images/Screenshot 2024-08-30 at 4.40.42 PM.png)
+![get element by id](images/ss9.png)
 
 #### PUT - Update device name
 - http://127.0.0.1:8000/api/elements/aabbcc1/
@@ -151,13 +151,13 @@ Example body:
 }
 ```
 Result:
-![update element](images/Screenshot 2024-08-30 at 4.46.58 PM.png)
+![update element](images/ss10.png)
 
 #### DELETE - Erase element
 - http://127.0.0.1:8000/api/elements/aabbcc1/
 
 Result:
-![Delete element](images/Screenshot 2024-08-30 at 4.52.04 PM.png)
+![Delete element](images/ss11.png)
 
 ### Task 5
 
