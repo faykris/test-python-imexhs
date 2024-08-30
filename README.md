@@ -46,7 +46,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-![New table image](images/Screenshot 2024-08-30 at 3.27.29 PM.png)
+![New table image](`images/Screenshot 2024-08-30 at 3.27.29 PM.png`)
 
 ## Running Tasks
 Now I will show you how you can run every task of this test:
@@ -57,7 +57,7 @@ Run the following command since the root project or execute directly through you
 python task_1/task_1.py
 ```
 The result will be something like this:
-![task 1](images/Screenshot 2024-08-30 at 3.42.06 PM.png)
+![task 1](`images/Screenshot 2024-08-30 at 3.42.06 PM.png`)
 
 ### Task 2
 Run the following command since the root project or execute directly through your code editor
