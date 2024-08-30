@@ -92,7 +92,7 @@ python manage.py runserver
 The server should be running like this:
 ![running django](images/ss6.png)
 
-Now I will show how work each endpoint on this task:
+Now I will show how work each endpoint on this task, don't forget put slash character (***/***) at final of every url:
 
 #### POST - Add new element
 
