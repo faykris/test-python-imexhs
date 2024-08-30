@@ -14,7 +14,9 @@ path = os.getenv("FOLDER_PATH")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class PatientRecord:
-    def __init__(self, name=None, age=None, birth_date=None, sex=None, weight=None, patient_id=None, patient_id_type=None):
+    def __init__(
+            self, name=None, age=None, birth_date=None, sex=None, weight=None, patient_id=None, patient_id_type=None
+    ):
         self.name = name
         self.age = age
         self.birth_date = birth_date

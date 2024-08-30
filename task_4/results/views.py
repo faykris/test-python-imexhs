@@ -21,6 +21,7 @@ class MedicalImageResultViewSet(viewsets.ModelViewSet):
 
         if 'device_name' in request.data:
             instance.device_name = request.data['device_name']
+            instance.raw_data['deviceName'] = request.data['device_name']
         if 'id' in request.data:
             instance.id = request.data['id']
 
